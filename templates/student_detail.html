@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Details for {{ student.student_name }}</h1>
+    <h2>Grades:</h2>
+    <ul>
+        {% for grade in grades %}
+            <li>{{ grade.course_name }} ({{ grade.course_number }}) - {{ grade.grade }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/students/all">Back to Students</a>
+</body>
+</html>

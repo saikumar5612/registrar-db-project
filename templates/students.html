@@ -1,0 +1,15 @@
+<!-- templates/students.html -->
+<!doctype html>
+<html>
+<head><title>All Students</title></head>
+<body>
+    <h1>All Students</h1>
+    <!-- students.html -->
+<ul>
+    {% for student in students %}
+        <li><a href="{{ url_for('student_detail', student_number=student.student_number) }}">{{ student.name }}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

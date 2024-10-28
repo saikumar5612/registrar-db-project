@@ -1,0 +1,14 @@
+<!-- templates/course_detail.html -->
+<!doctype html>
+<html>
+<head><title>Course Details</title></head>
+<body>
+    <h1>{{ course.course_name }} ({{ course.course_number }})</h1>
+    <h2>Prerequisites:</h2>
+    <ul>
+        {% for prereq in prerequisites %}
+            <li>{{ prereq.prerequisite_name }} ({{ prereq.Prerequisite_number }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

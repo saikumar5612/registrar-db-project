@@ -1,0 +1,13 @@
+<!-- templates/courses.html -->
+<!doctype html>
+<html>
+<head><title>All Courses</title></head>
+<body>
+    <h1>All Courses</h1>
+    <ul>
+        {% for course in courses %}
+            <li><a href="/courses/{{ course.course_number }}">{{ course.course_name }}</a> - {{ course.department }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

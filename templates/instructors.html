@@ -1,0 +1,13 @@
+<!-- templates/instructors.html -->
+<!doctype html>
+<html>
+<head><title>Instructor Courses</title></head>
+<body>
+    <h1>Courses taught by {{ instructor }}</h1>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.course_name }} - {{ course.semester }} {{ course.year }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
